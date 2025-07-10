@@ -29,4 +29,4 @@ jobs:
           python-version: "3.11"
 
       - name: Run script Hello Word
-        uses: python hello_world.py
+        run: python hello_world.py
