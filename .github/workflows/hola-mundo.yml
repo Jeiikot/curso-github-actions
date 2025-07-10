@@ -32,4 +32,4 @@ jobs:
         run: echo "USERNAME=${{github.actor}}" >> $GITHUB_ENV
 
       - name: Run script Hello Word
-        run: python hello_world.py
+        run: python hola_mundo.py
