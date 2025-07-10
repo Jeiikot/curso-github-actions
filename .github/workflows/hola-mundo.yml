@@ -28,5 +28,8 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Set up variables in enviroment
+        run: echo "USERNAME=${{github.actor}}" >> $GITHUB_ENV
+
       - name: Run script Hello Word
         run: python hello_world.py
