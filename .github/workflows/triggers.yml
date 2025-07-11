@@ -34,12 +34,21 @@ jobs:
   hola-mundo-manual:
     runs-on: ubuntu-latest
     steps:
+
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
       - name: Definir nombre
         run: echo "USERNAME=${{ inputs.nombre }}" >> $GITHUB_ENV
+
       - name: Definir lenguaje
         run: echo "LANGUAGE=${{ inputs.lenguaje_favorito }}" >> $GITHUB_ENV
+
       - name: Correr script
         run: python hola_lenguaje.py
   hola-mundo:
